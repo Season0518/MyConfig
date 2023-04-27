@@ -1,3 +1,3 @@
 # MyConfig
 
-我的NeoVim配置
+我常用的Vim配置和Vscode配置，Minimized为最小化版本，只保留了算法竞赛(Competitive Programming)必要的配置，以保证轻量化和良好的移植性
