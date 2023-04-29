@@ -1,0 +1,50 @@
+// 将键绑定放在此文件中以覆盖默认值auto[]
+[
+    {
+        "key": "ctrl+w j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key":  "ctrl+w k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+/",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'",
+        "args": "<C-/>"
+    },
+    // {
+    //   "key": "ctrl+n",
+    //   "command": "vscode-neovim.send",
+    //   "args": "<C-n>",
+    //   "when": "editorTextFocus && neovim.init && neovim.mode != insert || neovim.recording"
+    // },
+    // {
+    //   "key": "ctrl+p",
+    //   "command": "vscode-neovim.send",
+    //   "args": "<C-p>",
+    //   "when": "editorTextFocus && neovim.init && neovim.mode != insert || neovim.recording"
+    // },
+    // {
+    //     "command": "vscode-neovim.send",
+    //     // the key sequence to activate the binding
+    //     "key": "tab",
+    //     // don't activate during insert mode
+    //     "when": "editorTextFocus && neovim.mode == insert",
+    //     // the input to send to neovim
+    //    "args": "<Tab>"
+    // },
+    // {
+    //     "key": "/",
+    //     "command": "-list.toggleKeyboardNavigation",
+    //     "when": "listFocus && listSupportsKeyboardNavigation && !inputFocus"
+    // },
+    // {
+    //     "command": "vscode-neovim.compositeEscape1",
+    //     "key": "j",
+    //     "when": "neovim.mode == insert && editorTextFocus",
+    //     "args": "j"
+    // },
+]
