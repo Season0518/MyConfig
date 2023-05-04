@@ -1,6 +1,6 @@
 include_guard()
 
-include(MyProjectOptions)
+# include(MyProjectOptions)
 
 # structure_only_options(
 # [LIBRARIES [lib1 lib2 ...]]
@@ -62,6 +62,6 @@ function(structure_only)
     )
 
     target_sources(structure_only PRIVATE ${files})
-    target_link_libraries(structure_only PRIVATE project_options project_warnings structure_only_options)
+    target_link_libraries(structure_only structure_only_options)
   endforeach()
 endfunction()
