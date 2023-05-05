@@ -1,1 +1,0 @@
-{"name":"Local: test","url":"/Users/season/Projects/cplusplus/src/Algorithm/Untitled/test.cpp","tests":[{"id":1682227243621,"input":"2\n3\n0 100 10\n10 10 10\n0 2 20\n3\n0 10 20\n10 10 20\n20 10 20","output":"YES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/season/Projects/cplusplus/src/Algorithm/Untitled/test.cpp","group":"local","local":true}

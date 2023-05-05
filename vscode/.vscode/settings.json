@@ -22,13 +22,6 @@
         "launch": { "visibility": "hidden" },
         "status": { "visibility": "hidden" }
     },
-    //调整部分code-runner的设置，让程序在控制台中交互
-    "code-runner.fileDirectoryAsCwd": true,
-    "code-runner.ignoreSelection": true,
-    "code-runner.preserveFocus": false,
-    "code-runner.runInTerminal": true,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.temporaryFileName": "",
     //如果是在目录内，则将文件生成到/build目录下
     "code-runner.executorMap": {
         "c": "gcc $fileName -o $workspaceRoot/build/exec && $workspaceRoot/build/exec",
