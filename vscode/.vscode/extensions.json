@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "formulahendry.code-runner",
+        "vadimcn.vscode-lldb",
+        "DivyanshuAgrawal.competitive-programming-helper",
+        "usernamehw.errorlens",
+        "albert.TabOut",
+        "MS-CEINTL.vscode-language-pack-zh-hans",
+    ]
+}
