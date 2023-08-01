@@ -3,7 +3,7 @@
     {
       "type": "shell",
       "label": "g++: 编译单文件",
-      "command": "g++-12",
+      "command": "g++-11",
       "args": [
         "${file}",
         "-g",
@@ -21,6 +21,21 @@
         "panel": "shared"
       }
     },
+    {
+      "type": "shell",
+      "label": "XMake: 重新生成compile_commands",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }, 
+      "command": "xmake project -k compile_commands && mv compile_commands.json .vscode/",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      } 
+    }
   ],
   "version": "2.0.0"
 }

@@ -1,46 +1,11 @@
 {
-    //为了使用从clangd作为LSP，所以禁用intellisense
-    "C_Cpp.intelliSenseEngine": "disabled",
-    //clangd的
-    "clangd.arguments": [
-        "--query-driver=/opt/homebrew/bin/aarch64-apple-darwin22-g++-12",
-        "--compile-commands-dir=${workspaceFolder}",
-        "--enable-config",
-        "-j=8",
-        "--background-index",
-        "--completion-parse=auto",
-        "--function-arg-placeholders=false",
-        "--header-insertion=never",
-        "--pch-storage=memory",
-        "--ranking-model=decision_forest",
-        "--pretty"
-    ],
-    //隐藏CMake的部分按钮和提示功能，节省Status Bar空间
-    "cmake.statusbar.advanced": {
-        "build":  { "visibility": "hidden" },
-        "debug":  { "visibility": "hidden" },
-        "launch": { "visibility": "hidden" },
-        "status": { "visibility": "hidden" }
-    },
-    //如果是在目录内，则将文件生成到/build目录下
     "code-runner.executorMap": {
-        "c": "gcc $fileName -o $workspaceRoot/build/exec && $workspaceRoot/build/exec",
-        "cpp": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-12 $fileName -O2 -W -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/build/exec && $workspaceRoot/build/exec",
-        "python": "conda activate vscode && python $fileName"
-    },
-    "extensions.experimental.affinity": {
-        "llvm-vs-code-extensions.vscode-clangd": 1
+        "c": "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+        "cpp": "g++-11 $fileName -O2 -W -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/build/exec && $workspaceRoot/build/exec",
     },
     "cph.general.saveLocation": "/Users/season/Projects/cplusplus/.vscode/cph",
     "cph.general.defaultLanguage": "cpp",
     "cph.language.cpp.Args": "-O2 -W",
-    "cph.language.cpp.Command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-12",
+    "cph.language.cpp.Command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-11",
     "cph.general.menuChoices": "cpp python java",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/build": true,
-        // "**/.cache": true
-    }
 }

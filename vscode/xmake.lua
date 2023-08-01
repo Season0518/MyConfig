@@ -1,0 +1,11 @@
+add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
+set_languages("cxx17")
+set_config("toolchain","gcc")
+set_config("cxx", "/opt/homebrew/bin/g++-11")
+set_config("ld", "/opt/homebrew/bin/g++-11")
+
+target("structure_only")
+    add_defines("LOCAL")
+    set_kind("static")
+    add_includedirs("dependency/include")
+    add_files("src/**.cpp")
