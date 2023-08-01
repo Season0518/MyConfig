@@ -8,7 +8,7 @@
         "${file}",
         "-g",
         "-o",
-        "${workspaceFolder}/build/executable",
+        "${workspaceFolder}/.xmake/executable",
       ],
       "options": {
         "cwd": "${workspaceFolder}"

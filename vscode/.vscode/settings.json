@@ -6,6 +6,6 @@
     "cph.general.saveLocation": "/Users/season/Projects/cplusplus/.vscode/cph",
     "cph.general.defaultLanguage": "cpp",
     "cph.language.cpp.Args": "-O2 -W",
-    "cph.language.cpp.Command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-11",
+    // "cph.language.cpp.Command": "/opt/homebrew/bin/aarch64-apple-darwin22-g++-11",
     "cph.general.menuChoices": "cpp python java",
 }
