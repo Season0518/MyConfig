@@ -1,7 +1,7 @@
 {
     "code-runner.executorMap": {
         "c": "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
-        "cpp": "g++-11 $fileName -O2 -W -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/.xmake/exec && $workspaceRoot/build/exec",
+        "cpp": "g++-11 $fileName -O2 -W -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/.xmake/exec && $workspaceRoot/.xmake/exec",
     },
     "cph.general.saveLocation": "/Users/season/Projects/cplusplus/.vscode/cph",
     "cph.general.defaultLanguage": "cpp",
