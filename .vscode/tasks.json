@@ -3,7 +3,7 @@
     {
       "type": "shell",
       "label": "g++: 编译单文件",
-      "command": "g++-11",
+      "command": "g++-14",
       "args": [
         "${file}",
         "-g",
