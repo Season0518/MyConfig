@@ -17,6 +17,8 @@ Main: 完全还原IDE由`CMake`导出的`compile_commands.json`，尽可能多�
 
 ## 使用方法
 
+如果想生成`Compile_commands.json` 请使用`VSCode`的`Task`功能。
+
 🚧 待完成/Unfinished 🚧
 
 ## 部分参考来源
