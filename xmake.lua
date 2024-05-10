@@ -13,10 +13,10 @@ target("structure_only")
     add_defines("LOCAL")
     set_kind("static")
     add_includedirs("dependency/include")
-    add_files("src/**.c")   
-    add_files("src/**.cc")  
-    add_files("src/**.cpp") 
-    add_files("src/**.cxx") 
+    add_files("**.c")   
+    add_files("**.cc")  
+    add_files("**.cpp") 
+    add_files("**.cxx") 
 
     -- 对MacOSX平台进行特殊处理，添加Xcode SDK路径
     if is_plat("macosx") then
