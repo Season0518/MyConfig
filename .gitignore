@@ -1,4 +1,6 @@
 .DS_Store
 .cache
 build
-src
+.xmake
+**/cph/*
+compile_commands.json

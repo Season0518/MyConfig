@@ -1,0 +1,6 @@
+{
+    "cph.general.saveLocation": "/Users/season/Projects/cplusplus/.vscode/cph",
+    "cph.general.defaultLanguage": "cpp",
+    "cph.language.cpp.Args": "-O2 -W",
+    "cph.general.menuChoices": "cpp python java",
+}

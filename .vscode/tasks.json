@@ -1,0 +1,41 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++: 编译单文件",
+      "command": "g++-14",
+      "args": [
+        "${file}",
+        "-g",
+        "-o",
+        "${workspaceFolder}/.xmake/executable",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "XMake: 重新生成compile_commands",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }, 
+      "command": "xmake project -k compile_commands && mv compile_commands.json .vscode/",
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      } 
+    }
+  ],
+  "version": "2.0.0"
+}
