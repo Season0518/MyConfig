@@ -1,6 +1,6 @@
 .DS_Store
-.cache
-build
-.xmake
-**/cph/*
-compile_commands.json
+src/**
+!src/example.cpp
+!src/HDU1542.cpp
+!src/POJ3468.cpp
+*.gch

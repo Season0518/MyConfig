@@ -1,25 +1,19 @@
+CompileFlags:
+  Remove:
+    - "-fmodule*"
+    - "-fdeps-format*"
 Diagnostics:
   Suppress: ["type_unsupported"]
-  # ClangTidy:
-  #   Add: ["*"]
-  #   Remove:
-  #     [
-  #       # abseil*,
-  #       fuchsia*,
-  #       llvmlib*,
-  #       zircon*,
-  #       altera*,
-  #       google-readability-todo,
-  #       readability-braces-around-statements,
-  #       hicpp-braces-around-statements,
-  #       modernize-use-trailing-return-type,
-  #     ]
+  ClangTidy:
+    Add: [ ]
+    # Remove:
 Index:
   Background: Build
-  StandardLibrary: Yes
+  StandardLibrary: No
 InlayHints:
   Enabled: Yes
   ParameterNames: Yes
   DeducedTypes: Yes
 Hover:
   ShowAKA: Yes
+

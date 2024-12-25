@@ -6,6 +6,9 @@
       "command": "g++-14",
       "args": [
         "${file}",
+        "-DLOCAL",
+        "-DDBG_MACRO_NO_WARNING",
+        "-I${workspaceFolder}/dependency/include",
         "-g",
         "-o",
         "${workspaceFolder}/.xmake/executable",
@@ -20,21 +23,6 @@
         "focus": false,
         "panel": "shared"
       }
-    },
-    {
-      "type": "shell",
-      "label": "XMake: 重新生成compile_commands",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      }, 
-      "command": "xmake project -k compile_commands && mv compile_commands.json .vscode/",
-      "group": "build",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared"
-      } 
     }
   ],
   "version": "2.0.0"

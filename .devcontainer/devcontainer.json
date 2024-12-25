@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "⁺✞ʚ 初音ミク重度依賴 ɞ✟₊",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode":{
+			"settings": {
+				"code-runner.fileDirectoryAsCwd": true,
+				"code-runner.ignoreSelection": true,
+				"code-runner.preserveFocus": false,
+				"code-runner.runInTerminal": true,
+				"code-runner.saveFileBeforeRun": true,
+				"code-runner.temporaryFileName": "",
+				"code-runner.executorMap": {
+					"cpp": "g++-14 $fileName -O2 -Wall -Wextra -Wconversion -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/.xmake/exec && $workspaceRoot/.xmake/exec"
+				},		
+				"clangd.arguments": [
+				// "--compile-commands-dir=${workspaceFolder}/.vscode",
+				"--enable-config",
+				"-j=8",
+				"--background-index",
+				"--completion-parse=auto",
+				"--function-arg-placeholders=false",
+				"--header-insertion=never",
+				"--pch-storage=memory",
+				"--ranking-model=decision_forest",
+				"--pretty",
+				"-log=verbose"
+				],
+				"clangd.fallbackFlags": [
+					"-Wall",
+					"-Wextra",
+					"-Wshadow",
+					"-Wunused",
+					"-fsanitize=address",
+					"-fsanitize=undefined",
+					"-stdlib=libstdc++",
+					"-I${workspaceFolder}/dependency/include",
+					"-DLOCAL"
+					// 注意：clangd在c++17以上时，对于链式前向星的解析有严重问题：issue: clangd/clangd#2231
+					// "-std=c++23",
+					// "-fexperimental-new-constant-interpreter"
+				]
+			},
+			"extensions": [
+				"llvm-vs-code-extensions.vscode-clangd",
+				"vadimcn.vscode-lldb",
+				"xaver.clang-format",
+				"formulahendry.code-runner",
+				"usernamehw.errorlens",
+				"albert.TabOut",
+				"formulahendry.code-runner"
+			]
+		}
+	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
