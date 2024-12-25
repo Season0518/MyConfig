@@ -11,7 +11,7 @@
         "-I${workspaceFolder}/dependency/include",
         "-g",
         "-o",
-        "${workspaceFolder}/.xmake/executable",
+        "/tmp/executable",
       ],
       "options": {
         "cwd": "${workspaceFolder}"

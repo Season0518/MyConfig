@@ -8,7 +8,7 @@
         "name": "LLDB: 生成和调试单文件",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/.xmake/executable",
+        "program": "/tmp/executable",
         "args": [],
         "stopOnEntry": false,
         "cwd": "${fileDirname}",

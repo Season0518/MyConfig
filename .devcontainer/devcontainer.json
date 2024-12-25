@@ -20,7 +20,7 @@
 				"code-runner.saveFileBeforeRun": true,
 				"code-runner.temporaryFileName": "",
 				"code-runner.executorMap": {
-					"cpp": "g++-14 $fileName -O2 -Wall -Wextra -Wconversion -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o $workspaceRoot/.xmake/exec && $workspaceRoot/.xmake/exec"
+					"cpp": "g++-14 $fileName -O2 -Wall -Wextra -Wconversion -std=c++17 -DLOCAL -DDBG_MACRO_NO_WARNING -I$workspaceRoot/dependency/include -o /tmp/exec && /tmp/exec"
 				},		
 				"clangd.arguments": [
 				// "--compile-commands-dir=${workspaceFolder}/.vscode",
